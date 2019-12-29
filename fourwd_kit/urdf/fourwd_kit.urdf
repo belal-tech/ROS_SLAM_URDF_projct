@@ -1,0 +1,370 @@
+<robot
+  name="fourwd_kit">
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00038287 -0.00027 -0.026745"
+        rpy="0 0 0" />
+      <mass
+        value="0.3363" />
+      <inertia
+        ixx="0.00057304"
+        ixy="1.6829E-06"
+        ixz="7.047E-07"
+        iyy="0.0016258"
+        iyz="-5.2262E-07"
+        izz="0.0019597" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+
+
+  <link
+    name="FrontLeftWheel">
+    <inertial>
+      <origin
+        xyz="0.0087527 3.4694E-18 -1.0709E-05"
+        rpy="0 0 -3.14" />
+      <mass
+        value="0.051031" />
+      <inertia
+        ixx="3.3073E-05"
+        ixy="-7.0258E-22"
+        ixz="-1.7277E-08"
+        iyy="1.8952E-05"
+        iyz="6.5635E-22"
+        izz="1.8952E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -3.14" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/FrontLeftWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -3.14" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/FrontLeftWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontLeftWheelJoint"
+    type="continuous">
+    <origin
+      xyz="0.058926 0.056774 -0.0325"
+      rpy="1.5708 -3.1329E-17 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="FrontLeftWheel" />
+    <axis
+      xyz="-1 0 0.0012235" />
+  </joint>
+
+
+
+  <link
+    name="FrontRightWheel">
+    <inertial>
+      <origin
+        xyz="-0.0073659 1.3878E-17 1.7387E-05"
+        rpy="0 0 -3.14" />
+      <mass
+        value="0.051031" />
+      <inertia
+        ixx="3.3073E-05"
+        ixy="-4.4954E-22"
+        ixz="-3.3333E-08"
+        iyy="1.8952E-05"
+        iyz="1.3666E-21"
+        izz="1.8952E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -3.14" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/FrontRightWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -3.14" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/FrontRightWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontRightWheelJoint"
+    type="continuous">
+    <origin
+      xyz="0.05916 -0.059242 -0.0325"
+      rpy="1.5708 -3.1329E-17 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="FrontRightWheel" />
+    <axis
+      xyz="-1 0 0.0023605" />
+  </joint>
+
+
+
+
+
+  <link
+    name="BackLeftWheel">
+    <inertial>
+      <origin
+        xyz="0.0081291 8.6736E-18 -7.7011E-05"
+        rpy="0 0 -3.14" />
+      <mass
+        value="0.051031" />
+      <inertia
+        ixx="3.3072E-05"
+        ixy="-6.8518E-22"
+        ixz="-1.3376E-07"
+        iyy="1.8952E-05"
+        iyz="4.2517E-22"
+        izz="1.8953E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -3.14" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/BackLeftWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -3.14" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/BackLeftWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackLeftWheelJoint"
+    type="continuous">
+    <origin
+      xyz="-0.056827 0.055992 -0.0325"
+      rpy="1.5708 -3.1329E-17 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="BackLeftWheel" />
+    <axis
+      xyz="-0.99996 0 0.009473" />
+  </joint>
+
+
+
+
+  <link
+    name="BackRightWheel">
+    <inertial>
+      <origin
+        xyz="-0.0082763 -3.4694E-18 -7.8759E-05"
+        rpy="0 0 -3.14" />
+      <mass
+        value="0.051031" />
+      <inertia
+        ixx="3.3072E-05"
+        ixy="-1.3343E-21"
+        ixz="1.3437E-07"
+        iyy="1.8952E-05"
+        iyz="1.2506E-21"
+        izz="1.8953E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -3.14" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/BackRightWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 -3.14" />
+      <geometry>
+        <mesh
+          filename="package://fourwd_kit/meshes/BackRightWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BackRightWheelJoint"
+    type="continuous">
+    <origin
+      xyz="-0.057037 -0.05681 -0.0325"
+      rpy="1.5708 -3.1329E-17 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="BackRightWheel" />
+    <axis
+      xyz="-0.99995 0 -0.0095158" />
+  </joint>
+
+
+
+<link name="laser_scanner">
+        <inertial>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <mass
+            value="0.05" />
+        <inertia
+            ixx="0"
+            ixy="0"
+            ixz="0"
+            iyy="0"
+            iyz="0"
+            izz="0" />
+        </inertial>
+    </link>
+    <!-- Laser Scanner Joint to connect the laser scanner to the chassis -->
+    <joint name="laser_scanner_joint"
+        type="fixed">
+        <origin
+        xyz="0 0 0.1"
+        rpy="0 0 0" />
+        <parent
+        link="base_link" />
+        <child
+        link="laser_scanner" />
+        <axis
+        xyz="0 0 0" />
+</joint>
+
+
+<!-- Loading gazebo sensor (laser scanner) plugin and connecting it to the laser scanner link -->
+    <gazebo reference="laser_scanner">
+      <sensor type="ray" name="laser_scanner_2d">
+        <pose>0 0 0 0 0 0</pose>
+        <visualize>false</visualize>
+        <update_rate>40</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>720</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.14</min_angle>
+              <max_angle>3.14</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.10</min>
+            <max>30.0</max>
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <!-- Noise parameters based on published spec for Hokuyo laser
+                 achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+                 stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+                 reading. -->
+            <mean>0.0</mean>
+            <stddev>0.0</stddev>
+          </noise>
+        </ray>
+        <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+          <topicName>scan</topicName>
+          <frameName>laser_scanner</frameName>
+        </plugin>
+      </sensor>
+</gazebo>
+
+
+
+
+
+
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>FrontLeftWheelJoint</leftFrontJoint>
+    <rightFrontJoint>FrontRightWheelJoint</rightFrontJoint>
+    <leftRearJoint>BackLeftWheelJoint</leftRearJoint>
+    <rightRearJoint>BackRightWheelJoint</rightRearJoint>
+    <wheelSeparation>0.4</wheelSeparation>
+    <wheelDiameter>0.215</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>true</broadcastTF>
+  </plugin>
+</gazebo>
+
+
+
+
+</robot>
